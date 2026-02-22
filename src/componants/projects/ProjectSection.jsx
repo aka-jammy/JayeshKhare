@@ -4,7 +4,7 @@ import ConstractionRev from '../parts/ConstructionRev'
 import ProjectCard from './ProjectCard'
 import ProjectCardWIP from './ProjectCardWIP'
 
-const ProjectSection = () => {
+const ProjectSection = ({ projects }) => {
     return (
         <section className='relative w-screen h-screen flex justify-center items-center overflow-hidden' id="mainProject">
             <div className="h-full w-full flex justify-center items-center border-t-8">
@@ -17,7 +17,7 @@ const ProjectSection = () => {
 
                     <div className=" w-full h-full p-5 flex items-center justify-center gap-5  flex-col md:flex-row">
 
-                        <ProjectCard />
+                        {projects && projects[0] && <ProjectCard image={projects[0].image} description={projects[0].description} onClick={() => window.open(projects[0].url, "_blank")} />}
                         <ProjectCardWIP />
 
                     </div>

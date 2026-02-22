@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import StyledButtonShadow from './StyledButtonShadow';
 
-const StyledButton = ({ children }) => {
+const StyledButton = ({ children, onClick }) => {
     // 1. Give each button its OWN state
     const [duration, setDuration] = useState(50);
     const [shadow, setShadow] = useState(false);
@@ -29,29 +29,7 @@ const StyledButton = ({ children }) => {
                     // boxShadow: shadow ? "none" : "8px 8px 0 black",
                     backgroundColor: shadow ? pressedBg : baseBg,
                 }}
-
-            //     onClick={() => {
-            //         switch (children[0]) {
-            //         case "Email me!":
-            //             window.open("https://google.com", "_blank");
-            //             break;
-
-            //         case "Connect me":
-            //             window.open("https://www.linkedin.com/in/jayesh-khare/", "_blank");
-            //             break;
-
-            //         case "Visit Dribbble":
-            //             window.open("https://dribbble.com", "_blank");
-            //             break;
-
-            //         case "Visit Behance":
-            //             window.open("https://behance.com", "_blank");
-            //             break;
-
-            //         default:
-            //             console.log("No matching site for:", children);
-            //     }
-            // }}
+                onClick={onClick}
             >
                 {children}
             </button>

@@ -27,7 +27,7 @@ const Connectsection = (props) => {
 
                         {props.connectCard.map((e, idx) => {
 
-                            return <ConnectCard key={idx} bgColor={e.bgColor} btnText={e.btnText} icon={e.icon} />
+                            return <ConnectCard key={idx} bgColor={e.bgColor} btnText={e.btnText} icon={e.icon} action={e.action} />
                             
                         })}
 

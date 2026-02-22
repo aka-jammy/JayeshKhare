@@ -7,7 +7,7 @@ const ConnectCard = (props) => {
             <div style={{backgroundColor:props.bgColor}} className=" h-[70%] mb-2 inset-shadow-sm inset-shadow-gray-500/50 rounded-lg flex px-20 justify-center">
                 <img src={props.icon} alt=" brand icon " />
             </div>
-            <StyledButton >
+            <StyledButton onClick={props.action}>
                 {props.btnText} <img className='size-6 lg:size-10 ml-2 translate-y-1.5 md:translate-y-2.5 scale-y-[-1]' src="ic_arrow.svg" alt=" arrow img" />
             </StyledButton>
         </div>
