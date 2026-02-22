@@ -1,0 +1,133 @@
+:root {
+  --bg-Primary-Color: #F6F5F8;
+  --bg-Secondary-color: #D8C5F3;
+  --btn-Primary-Color: #2ED1A4;
+  --btn-Secondary-Color: #2aa783;
+
+  /* connect card bg color */
+
+  --card-Primary-Color: #f1f1f1;
+  --card-bg-mint: #D1FDE6;
+  --card-bg-lightBlue: #BFDBF6;
+  --card-bg-pink: #FFABE7;
+  --card-bg-darkBlue: #4C87FD;
+
+  /* Navbar colors */
+
+  --navBtn-Primary-Color: #2ED1A4;
+
+  --wiggle-multi: 2; 
+  --animate-wiggle-rev: wiggle-rev 1s ease-in-out 0.5s infinite;
+  --animate-wiggle: wiggle 1s ease-in-out 0.5s infinite;
+}
+
+@keyframes wiggle {
+
+  0%   { transform: translateY(calc(0px * var(--wiggle-multi))); }
+  50% { transform: translateY(calc(5px * var(--wiggle-multi))); }
+  100%   { transform: translateY(calc(0px * var(--wiggle-multi))); }
+
+}
+
+@keyframes wiggle-rev {
+
+  0%   { transform: translateY(calc(0px * var(--wiggle-multi))); }
+  50% { transform: translateY(calc(-5px * var(--wiggle-multi))); }
+  100%   { transform: translateY(calc(0px * var(--wiggle-multi))); }
+
+}
+
+body {
+  background-color: var(--bg-Primary-Color);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 2rem;
+  font-weight: 200;
+  overflow-x: hidden;
+}
+
+.font-comfortaa-bold {
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.font-comfortaa-reg {
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.font-silkscreen-reg {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-silkscreen-bold {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.font-anton-reg {
+  font-family: "Anton", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.no-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none;     /* IE 10+ */
+  user-select: none;         /* Standard */
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-20.5%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-slide {
+  animation: slide 18s linear infinite;
+}
+
+@keyframes slideGround {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-slideGround {
+  animation: slideGround 15s linear infinite 1s;
+}
+
+@keyframes slideGround2 {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-slideGround2 {
+  animation: slideGround2 15s linear infinite 1s;
+}
