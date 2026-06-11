@@ -13,7 +13,7 @@ function HeroPage() {
     const [showResume, setShowResume] = useState(false);
 
     const openResume = () => {
-        window.open("/Jayesh_Khare_Resume.pdf", "_blank", "noopener,noreferrer");
+        window.open(`${import.meta.env.BASE_URL}Jayesh_Khare_Resume.pdf`, "_blank");
     };
 
     return (
