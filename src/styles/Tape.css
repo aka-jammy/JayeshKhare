@@ -1,0 +1,38 @@
+.tape-container{
+    position: absolute;
+    flex-direction: row;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+
+    width: 100vw;
+    height: 50px;
+
+    background-image: url("../assets/tape.png");
+    background-size: auto 100%;
+    background-repeat: repeat-x;
+
+    z-index: 99;
+
+    white-space: nowrap;
+
+    animation: scroll 8s linear infinite;
+
+    overflow: hidden;
+
+    user-select: none;
+}
+
+@keyframes scroll {
+    from {
+        background-position-x: 0;
+    }
+
+    to {
+        background-position-x: 630px;
+    }
+}

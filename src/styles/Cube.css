@@ -1,0 +1,18 @@
+.cube-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 320px;
+    min-height: 320px;
+    aspect-ratio: 1;
+    border: none;
+}
+
+.cube-body {
+    width: 100%;
+    height: 100%;
+
+    background-image: url('../assets/cube/body.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}

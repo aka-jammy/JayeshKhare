@@ -1,0 +1,40 @@
+
+
+.sparkle-container{
+    width: 40px;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.sparkle-container .sparkle-small{
+    position: absolute;
+    width: 50%;
+    height: auto;
+    top: 0;
+    left: -18%;
+}
+
+.sparkle-container .sparkle-medium{
+    position: absolute;
+    width: 50%;
+    height: auto;
+    bottom: -10%;
+    left: -4%;
+}
+
+.sparkle-container .sparkle-big{
+    width: 100%;
+}
+
+
+.sparkle-container .sparkle-small #outline,
+.sparkle-container .sparkle-medium #outline{
+    filter: drop-shadow(0 6px 0 black);
+}
+.sparkle-container .sparkle-big #outline{
+    filter: drop-shadow(0 4px 0 black);
+}

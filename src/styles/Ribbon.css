@@ -1,0 +1,51 @@
+.ribbon-container {
+    display: inline-flex;
+    flex-direction: row;
+    height: var(--ribbon-height);
+    align-items: center;
+
+    transform: translateX(calc(-1 * var(--border-size)));
+
+    margin-bottom: 20px;
+}
+
+.ribbon-content {
+    display: inline-flex;
+    height: 100%;
+    align-items: center;
+    padding: 0 40px 0 60px;
+
+    font-size: var(--font-xlarge);
+    font-family: var(--font-heading);
+
+    background-color: var(--ribbon-color);
+    border-top: var(--border);
+    border-bottom: var(--border);
+    box-shadow: var(--shadow);
+
+    z-index: 1;
+}
+
+.ribbon-content span {
+    white-space: nowrap;
+}
+
+.ribbon-tail-container {
+    height: 100%;
+    aspect-ratio: 1/1;
+
+    transform: translateX(-40px);
+}
+
+.ribbon-tail{
+    fill: var(--ribbon-color);
+    stroke-width: var(--border-size);
+    stroke: var(--border-color);
+
+    filter: drop-shadow(var(--shadow));
+    
+}
+
+.ribbon-tail path{
+    vector-effect: non-scaling-stroke;
+}

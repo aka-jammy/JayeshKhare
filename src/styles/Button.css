@@ -1,0 +1,61 @@
+.button-container button {
+    display: flex;
+    width: 100%;
+    height: var(--button-height);
+    background-color: var(--button-background);
+    font-family: var(--font-accent);
+    border: var(--border);
+    box-shadow: var(--shadow);
+    font-size: clamp(var(--font-medium), 4vw,var(--font-large));
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.button-icon {
+    aspect-ratio: 1;
+    width: clamp(24px, 2rem, 34px);
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.button-container {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.button-container:hover button {
+    transform: translateY(2px);
+    box-shadow: var(--shadow-on-hover);
+}
+
+.button-container:active button {
+    transform: translateY(var(--shadow-size-large));
+    box-shadow: none;
+}
+
+.button-container button {
+    position: relative;
+    overflow: hidden;
+}
+
+.button-container button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--overlay);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.button-container:active button::before {
+    opacity: 1;
+}
+
+.button-container:hover button::before {
+    opacity: 1;
+}

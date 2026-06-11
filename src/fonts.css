@@ -1,0 +1,38 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Anton';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/anton-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Epilogue';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/epilogue-400.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Epilogue';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/fonts/epilogue-700.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Silkscreen';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/silkscreen-regular.woff2') format('woff2');
+}
+
+:root {
+
+    --font-heading: "Anton", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    --font-body: "Epilogue", Inter, "Segoe UI", Roboto, Arial, sans-serif;
+    --font-accent: "Silkscreen", Consolas, "Courier New", monospace;
+}

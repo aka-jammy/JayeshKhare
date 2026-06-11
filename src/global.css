@@ -1,0 +1,111 @@
+  :root {
+    --white: #F6F5F8FF;
+    --pure-white: #FFFFFFFF;
+    --black: #1F1F1F;
+    --pure-black: #000000FF;
+    --purple: #A47BEDFF;
+    --light-purple: #DAC7F6FF;
+    --mint: #2DD1A3;
+    --light-mint: #D1FDE7FF;
+    --red: #EF5757FF;
+
+    --scrim: #000000BB;
+
+
+    --color-negative: var(--red);
+
+    --overlay: rgba(0, 0, 0, 0.1);
+
+    --border: var(--border-size) solid var(--border-color);
+    --border-small: var(--border-size-small) solid var(--border-color);
+
+    --shadow: 0 var(--shadow-size-large) 0 var(--shadow-color);
+    --shadow-on-hover: 0 var(--shadow-size-medium) 0 var(--shadow-color);
+
+    --text-color: var(--black);
+    --text-color-inverted: var(--white);
+
+    --shadow-size-large: 8px;
+    --shadow-size-medium: 6px;
+    --shadow-size-small: 4px;
+    --border-size: 4px;
+    --border-size-small: 2px;
+
+    --background-color: var(--white);
+    --secondary-background-color: var(--light-purple);
+
+    --shadow-color: var(--pure-black);
+    --border-color: var(--pure-black);
+
+    --font-xlarge: 32px;
+    --font-large: 22px;
+    --font-medium: 18px;
+    --font-small: 16px;
+    --font-xsmall: 12px;
+
+    --default-font-size: var(--font-small);
+
+    --navbar-height: 65px;
+    --navbar-background-color: var(--background-color);
+    --navbar-link-hover-color: var(--mint);
+
+    --ribbon-color: var(--purple);
+    --ribbon-height: 90px;
+
+    --card-background: var(--light-mint);
+
+    --button-background: var(--mint);
+    --button-background-negative: var(--color-negative);
+    --button-height: 70px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+
+    scroll-padding-top: var(--navbar-height);
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  body {
+    font-family: var(--font-body);
+    font-optical-sizing: auto;
+    letter-spacing: 0.50px;
+    font-size: clamp(var(--font-small), 1.2vw, var(--font-xlarge));
+    color: var(--text-color);
+    background-color: var(--background-color);
+  }
+
+  section {
+    position: relative;
+    overflow: hidden;
+    border-bottom: var(--border);
+    min-height: calc(100dvh - var(--navbar-height));
+  }
+
+  body::before {
+    --size: clamp(60px, 5vw, 200px);
+    --thickness: 0.08;
+
+    display: block;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    content: "";
+    z-index: -999;
+
+    background-image:
+      linear-gradient(rgba(0, 0, 0, var(--thickness)) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 0, 0, var(--thickness)) 1px, transparent 1px);
+
+    background-size: var(--size) var(--size);
+
+    background-position: 0px 50px, 00px 0px;
+  }

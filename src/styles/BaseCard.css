@@ -1,0 +1,17 @@
+.base-card-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    max-width: 400px;
+    aspect-ratio: 1;
+    width: 80vw;
+    background-color: var(--card-background);
+
+    border: var(--border);
+    box-shadow: var(--shadow);
+
+    overflow: hidden;
+
+    user-select: none;
+}

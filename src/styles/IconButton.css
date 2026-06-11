@@ -1,0 +1,44 @@
+.icon-button-container {
+    display: flex;
+    height: 100%;
+    aspect-ratio: 1;
+    min-height: 40px;
+    cursor: pointer;
+
+}
+
+.icon-button-container button {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+    border-radius: 0;
+    position: relative;
+    border: var(--border);
+    background-color: var(--background-color);
+    box-shadow: var(--shadow);
+
+    font-family: var(--font-accent);
+    font-size: 2rem;
+}
+
+.icon-button-container:hover button {
+    background-color: var(--hover-color);
+    box-shadow: var(--shadow-on-hover);
+    transform: translateY(2px);
+}
+
+.icon-button-container:active button {
+    box-shadow: none;
+    background-color: var(--hover-color);
+    transform: translateY(var(--shadow-size-large));
+}

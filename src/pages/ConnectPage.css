@@ -1,0 +1,129 @@
+.connect-section {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary-background-color);
+    gap: 40px;
+    padding-bottom: 100px;
+}
+
+
+.cuby {
+    display: none;
+}
+
+.contact-form-container {
+    display: flex;
+    width: 100%;
+    height: 490px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: center;
+    gap: 20px;
+
+    margin-bottom: 40px;
+    margin-top: 80px;
+    padding: 0 10%;
+}
+
+.contact-form-container .text-container h2 {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+}
+
+.contact-form-container .contact-form {
+    width: 100%;
+}
+
+.contact-form-container .text-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.connect-ribbon {
+    margin-top: 20px;
+}
+
+.connect-section .card-grid-container {
+    --gap-amount: 20px;
+
+    display: grid;
+
+    /* 1. Exactly one column that matches the width of your cards */
+    grid-template-columns: auto;
+
+    /* 2. Exactly four rows that scale perfectly to fit your card content */
+    grid-template-rows: repeat(4, auto);
+
+    /* 3. Center the entire 4-row block in the middle of the screen */
+    justify-content: center;
+    align-content: center;
+
+    /* 4. Center the internal card elements inside the grid lines */
+    justify-items: center;
+    align-items: center;
+
+    gap: calc(var(--gap-amount) + var(--shadow-size-large));
+}
+
+.connect-section .card-grid-container .connect-card {
+    width: 80vw;
+}
+
+@media (min-width: 835px) {
+
+    .connect-section .card-grid-container {
+        margin: 40px 0;
+
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(2, auto);
+        gap: var(--gap-amount);
+        row-gap: calc(var(--gap-amount) + var(--shadow-size-large));
+    }
+}
+
+@media (min-width: 1400px) {
+
+    .connect-section {
+        padding: 40px 0;
+    }
+
+
+    .connect-ribbon {
+        position: absolute;
+        margin: 0;
+    }
+
+    .contact-form-container {
+        flex-direction: row;
+        padding: 0 20%;
+    }
+
+    .contact-form-container .text-container {
+        justify-content: top;
+        height: 100%;
+    }
+
+    .contact-form-container .text-container span {
+        height: 100%;
+    }
+
+    .cuby {
+        display: flex;
+        width: 320px;
+        aspect-ratio: 1;
+        align-self: flex-start;
+    }
+}
+
+
+@media (min-width: 1900px) {
+    .connect-section .card-grid-container {
+        grid-template-columns: repeat(4, auto);
+        grid-template-rows: repeat(1, fit-content);
+        gap: var(--gap-amount);
+        margin: 240px 0 40px 0;
+    }
+}

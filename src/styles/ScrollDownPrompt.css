@@ -1,0 +1,53 @@
+.scroll-down-prompt {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 16px;
+    align-items: center;
+
+    /* Link the animation name, duration, timing, and repetition */
+    animation: bounce 1s cubic-bezier(1, 0, 0, 1) infinite;
+}
+
+/* Define the up and down movement */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); /* Start and end position */
+    }
+    50% {
+        transform: translateY(-10px); /* Moves up by 10px at the halfway mark */
+    }
+}
+
+.scroll-down-prompt::after{
+    content: "";
+    aspect-ratio: 1;
+    width: 40px;
+    background-image: url("../assets/icons/ic_arrow_down.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.scroll-down-prompt::before{
+    content: "Scroll Down";
+    font-size: var(--font-small);
+    font-family: var(--font-accent);
+    opacity: 0;
+    transition: opacity 0.1s ease-out;
+}
+
+.scroll-down-prompt:hover::before{
+    opacity: 0.5;
+}
+
+@media (max-height: 760px) {
+    .scroll-down-prompt{
+        display: none;
+    }
+}
+
+@media (max-height: 800px) {
+    .scroll-down-prompt::before{
+        display: none;
+    }
+}
